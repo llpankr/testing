@@ -1,106 +1,226 @@
-#deneme amaçlıdır.
-```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Referans Giriş</title>
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
 }
 
 body{
-    background:white;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:white;
 }
+
 
 .container{
-    width:350px;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+width:350px;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
+
 
 input{
-    background:black;
-    color:white;
-    border:none;
-    padding:15px;
-    font-size:18px;
-    border-radius:8px;
-    outline:none;
-    transition:0.3s;
+background:black;
+color:white;
+border:none;
+padding:15px;
+font-size:18px;
+border-radius:8px;
+outline:none;
 }
 
-input::placeholder{
-    color:#ccc;
-}
 
-input:hover,
 input:focus{
-    box-shadow:0 0 15px red;
+box-shadow:0 0 15px red;
 }
+
 
 button{
-    background:black;
-    color:white;
-    border:none;
-    padding:15px;
-    font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:0.3s;
+
+position:relative;
+overflow:hidden;
+
+background:black;
+color:white;
+
+border:none;
+padding:15px;
+
+font-size:18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
 }
+
+
+button::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-120%;
+
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+red,
+transparent
+);
+
+transition:.5s;
+
+}
+
+
+button:hover::before{
+
+left:120%;
+
+}
+
 
 button:hover{
-    background:#ff0000;
-    box-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ff0000,
-        0 0 40px #ff0000;
+
+box-shadow:
+
+0 0 10px red,
+0 0 25px red,
+0 0 50px red;
+
 }
 
-button:active{
-    transform:scale(0.98);
+
+
+.hidden{
+
+display:none;
+
 }
+
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="container">
 
-    <input type="text" id="ref" placeholder="SMS bomber">
+<!-- Giriş Kapısı -->
 
-    <input type="password" id="key" placeholder="ddos">
+<div class="container" id="login">
 
-    <button onclick="girisYap()">
-        GİRİŞ YAP
-    </button>
+
+<input 
+type="text"
+id="ref"
+placeholder="Referans Kodu">
+
+
+<button onclick="kontrol()">
+GİRİŞ YAP
+</button>
+
 
 </div>
 
-<script>
-function girisYap(){
-
-    const referans = document.getElementById("pankr_ank").value;
-    const anahtar = document.getElementById("noryxlen").value;
 
 
-  
-    window.location.href = "https://t.me/+Yxzp7mbtNNgyMmRk";
+<!-- İç Sayfa -->
+
+<div class="container hidden" id="panel">
+
+
+<button onclick="buton1()">
+BUTON 1
+</button>
+
+
+<button onclick="buton2()">
+BUTON 2
+</button>
+
+
+</div>
+
+
+if(
+kod === "pankr_ank" ||
+kod === "noryxlen"
+
+){
+
+
+document
+.getElementById("login")
+.classList.add("hidden");
+
+
+document
+.getElementById("panel")
+.classList.remove("hidden");
+
+
+
 }
+
+else{
+
+
+alert("Geçersiz referans kodu!");
+
+}
+
+
+
+}
+
+
+
+function guvenlik(){
+
+
+alert("Güvenlik kontrolü başarılı");
+
+
+}
+
+
 </script>
+
 
 </body>
 </html>
-```
+function buton1(){
+
+window.location.href =
+"https://t.me/+Yxzp7mbtNNgyMmRk";
+
+}
+
+
+
+function buton2(){
+
+window.location.href =
+"https://t.me/+2WLxm_JY2ktkMGI0";
+
+}

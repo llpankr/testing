@@ -278,71 +278,7 @@ window.location.href =
 
 
 
-</script> async function kontrol(){
-
-let kod = document.getElementById("ref").value;
-
-
-let cevap = await fetch(
-"http://192.168.1.38:5000/kontrol",
-{
-
-method:"POST",
-
-headers:{
-"Content-Type":"application/json"
-},
-
-body:JSON.stringify({
-kod:kod
-})
-
-});
-
-
-let sonuc = await cevap.json();
-
-
-
-if(sonuc.durum=="ok"){
-
-
-document
-.getElementById("login")
-.classList.add("hidden");
-
-
-document
-.getElementById("panel")
-.classList.remove("hidden");
-
-
-}
-
-else{
-
-alert("Yanlış referans kodu");
-
-}
-
-
-}
-
-
-
-function buton1(){
-
-window.location.href=
-"https://t.me/+Yxzp7mbtNNgyMmRk";
-
-}
-
-
-
-function buton2(){
-
-window.location.href=
-"https://t.me/+2WLxm_JY2ktkMGI0";
+</script> 
 
 }
 

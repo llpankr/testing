@@ -1,0 +1,106 @@
+#deneme amaçlıdır.
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Referans Giriş</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:white;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:350px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input{
+    background:black;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:8px;
+    outline:none;
+    transition:0.3s;
+}
+
+input::placeholder{
+    color:#ccc;
+}
+
+input:hover,
+input:focus{
+    box-shadow:0 0 15px red;
+}
+
+button{
+    background:black;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff0000;
+    box-shadow:
+        0 0 10px #ff0000,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+button:active{
+    transform:scale(0.98);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <input type="text" id="ref" placeholder="SMS bomber">
+
+    <input type="password" id="key" placeholder="ddos">
+
+    <button onclick="girisYap()">
+        GİRİŞ YAP
+    </button>
+
+</div>
+
+<script>
+function girisYap(){
+
+    const referans = document.getElementById("pankr_ank").value;
+    const anahtar = document.getElementById("noryxlen").value;
+
+
+  
+    window.location.href = "https://t.me/+Yxzp7mbtNNgyMmRk";
+}
+</script>
+
+</body>
+</html>
+```
